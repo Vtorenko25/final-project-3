@@ -1,0 +1,48 @@
+import cors from "cors";
+import express, { NextFunction, Request, Response } from "express";
+import * as mongoose from "mongoose";
+import swaggerUi from "swagger-ui-express";
+
+import swaggerDocument from "../docs/swagger.json";
+import { config } from "./configs/config";
+import { ApiError } from "./errors/api.error";
+import { authRouter } from "./routes/auth.router";
+import { commentRouter } from "./routes/comment.router";
+import { managerRouter } from "./routes/manager.router";
+import { userRouter } from "./routes/user.router";
+
+const app = express();
+app.use(express.json());
+
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+    allowedHeaders: ["Authorization", "Content-Type"],
+  }),
+);
+app.use("/users", userRouter);
+
+app.use("/auth", authRouter);
+
+app.use("/comment", commentRouter);
+
+app.use("/managers", managerRouter);
+
+app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+app.use("*", (req, res, next) => {
+  next(new ApiError("Route not found", 404));
+});
+
+app.use((error: ApiError, req: Request, res: Response, next: NextFunction) => {
+  const status = error.status || 500;
+  const message = error.message ?? "Something went wrong";
+
+  res.status(status).json({ status, message });
+});
+
+app.listen(config.port, async () => {
+  await mongoose.connect(config.mongoUrl);
+  console.log(`Server has been started on port ${config.port}`);
+});
