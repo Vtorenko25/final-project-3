@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.users-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.users-container ul {
+    display: grid;
+    grid-template-columns: 2vw 4vw 5vw 12vw 6vw 2vw 4vw 6vw 6vw 5vw 4vw 6vw 4vw 8vw 4vw;
+    height: 2.7vh;
+    list-style: none;
+    padding: 2px 8px;
+    margin: 0;
+}
+.users-header {
+    color: blue;
+}
+.users-container li {
+    padding: 2px 4px;
+    margin: 2px;
+    text-align: left;
+    font-size: 10px;
+    white-space: nowrap;
+
+}
+
+.users-container ul:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.user-row:hover {
+    background-color: green;
+    color: black;
+}
+
+/************************************BUTTONS***************************************/
+
+.filter-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-wrapper-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-wrapper-buttons button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.export-btn {
+    font-size: 12px !important;
+}
+.reset-button {
+    font-size: 30px;
+}
+
+.filter-wrapper-buttons button:hover {
+    background-color: #218838;
+}

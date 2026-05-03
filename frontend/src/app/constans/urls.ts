@@ -1,0 +1,1 @@
+export const base: string = process.env.NEXT_PUBLIC_URL_BASE as string

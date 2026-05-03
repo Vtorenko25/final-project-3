@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header-component {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    color: white;
+    margin-bottom: 1vh;
+}
+.header-component ul {
+    width: 100%;
+    background-color: green;
+    display: grid;
+    grid-template-columns: 2vw 4vw 5vw 12vw 6vw 2vw 4vw 6vw 4vw 5vw 4vw 6vw 4vw 8vw 4vw;
+    list-style: none;
+    padding: 4px 8px;
+    margin: 0;
+}
+.header-component li {
+    padding: 4px 6px;
+    text-align: left;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.user-header {
+color: green;
+}
+
+

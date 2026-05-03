@@ -1,0 +1,296 @@
+
+.admin-component {
+    padding: 5vh 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.button-create {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 15vw;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: fit-content;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-create:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.manager-form {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    width: 360px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.manager-form:hover {
+    transform: translateY(-2px);
+}
+
+.manager-form label {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.manager-form input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.manager-form input:focus {
+    border-color: #28a745;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+button.cancel {
+    background: #6c757d;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.cancel:hover {
+    background: #5a6268;
+}
+
+button.create {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.create:hover {
+    background: #218838;
+}
+
+.stats-block-div {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.stats-block-div span {
+    display: inline-block;
+}
+
+.stats-block-h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/************************************Manager***********************************************/
+
+.managers-block {
+    width: 100%;
+    padding: 10px;
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.managers-block-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.manager-info {
+    width: 15vw;
+}
+.manager-item {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #ffffff;
+    border: 1px solid green;
+    border-radius: 12px;
+    padding: 10px;
+    width: 80vw;
+    min-width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.manager-item div {
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #333;
+}
+
+.manager-item strong {
+    color: #111;
+}
+
+.stats-block-manager-stats li {
+    list-style: none;
+}
+/*******************************************BUTTONS***************************************/
+.manager-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    justify-content: flex-start;
+    position: relative;
+    margin-right: 700px;
+}
+
+.manager-buttons button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    position: relative;
+}
+
+.activate-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.activate-btn:hover {
+    background-color: #218838;
+}
+
+.ban-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.ban-btn:hover {
+    background-color: #c82333;
+}
+
+.unban-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.unban-btn:hover {
+    background-color: #0069d9;
+}
+
+.copyMessage {
+    font-size: 0.85rem;
+    color: #28a745;
+    position: absolute;
+    top: 60px;
+    left: 500px;
+    margin-top: 4px;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/**************************************PAGINATION*************************************************/
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+.pagination button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.pagination button.active {
+    background-color: darkgreen;
+    font-weight: bold;
+    opacity: 1;
+    box-shadow: 0 4px 10px rgba(0, 128, 0, 0.3);
+}
+
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    color: #666;
+    transform: none;
+}
+
+
+.pagination-pages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+.pagination-btn {
+    font-size: 12px;
+    font-weight: bold;
+}

@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.comments {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    gap: 10px;
+}
+.message_block {
+    flex: 1;
+    font-size: 14px;
+}
+.comments-section {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+.comments-section input {
+    flex: 1;
+    padding: 6px 10px;
+    font-size: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 40vh;
+}
+.comments_block_comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-size: 10px;
+}
+.comments_block_manager {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+.comments-section button {
+    padding: 6px 12px;
+    font-size: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgba(0, 128, 0, 0.42);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.comments-section button:hover {
+
+    background-color: green;
+    color: rgb(163, 156, 156);
+}
+.comments-section button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+.comment-date {
+    color: #666;
+    font-size: 13px;
+}
+.button_edit {
+    flex-shrink: 0;
+    padding: 6px 12px;
+    font-size: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(0, 128, 0, 0.91);
+    color: #fff;
+    cursor: pointer;
+    height: fit-content;
+    margin-right: 2vh;
+    margin-left: 5vh;
+}

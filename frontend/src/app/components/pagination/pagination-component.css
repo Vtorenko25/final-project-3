@@ -1,0 +1,35 @@
+.paginationButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.paginationButtons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.paginationButtons button.active {
+    background-color: darkgreen;
+    font-weight: bold;
+    opacity: 1;
+}
+.paginationButtons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    color: #666;
+}
+.paginationButtons .dots {
+    background: transparent;
+    color: #333;
+    cursor: default;
+}
